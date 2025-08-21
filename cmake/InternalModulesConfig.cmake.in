@@ -1,0 +1,18 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+# Include the targets file
+include("${CMAKE_CURRENT_LIST_DIR}/InternalModulesTargets.cmake")
+
+# Set component-specific variables
+set(InternalModules_HAL_FOUND TRUE)
+set(InternalModules_SENSORS_FOUND TRUE)
+set(InternalModules_MEMORY_FOUND TRUE)
+set(InternalModules_PROTOCOLS_FOUND TRUE)
+set(InternalModules_SCHEDULER_FOUND TRUE)
+set(InternalModules_DISPLAY_FOUND TRUE)
+set(InternalModules_POWER_FOUND TRUE)
+set(InternalModules_CRYPTO_FOUND TRUE)
+
+check_required_components(InternalModules)
